@@ -1,0 +1,19 @@
+meta {
+  name: 3 - Profile (protegida)
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/api/profile
+  body: none
+  auth: none
+}
+
+headers {
+  Authorization: Bearer {{accessToken}}
+}
+
+docs {
+  Ruta protegida. Requiere el accessToken obtenido en el request de Login.
+}

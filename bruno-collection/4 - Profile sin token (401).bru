@@ -1,0 +1,15 @@
+meta {
+  name: 4 - Profile sin token (401)
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/api/profile
+  body: none
+  auth: none
+}
+
+docs {
+  Mismo endpoint protegido pero sin header Authorization. Debería devolver 401.
+}

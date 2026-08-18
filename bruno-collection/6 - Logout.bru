@@ -1,0 +1,25 @@
+meta {
+  name: 6 - Logout
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{baseUrl}}/api/auth/logout
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "refreshToken": "{{refreshToken}}"
+  }
+}
+
+docs {
+  Revoca el refreshToken. Después de esto, correr "5 - Refresh" de nuevo debería devolver 403.
+}
